@@ -211,7 +211,7 @@ function set-common-plan-args() {
 
     if [[ -v INPUT_REPLACE ]]; then
       if [[ -n "$INPUT_REPLACE" ]]; then
-          for target in $(echo "$INPUT_TARGET" | tr ',' '\n'); do
+          for target in $(echo "$INPUT_REPLACE" | tr ',' '\n'); do
               PLAN_ARGS="$PLAN_ARGS -replace $target"
           done
       fi
