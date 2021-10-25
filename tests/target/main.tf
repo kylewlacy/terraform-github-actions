@@ -15,9 +15,9 @@ variable "length" {
 }
 
 output "count" {
-  value = random_string.count[0]
+  value = random_string.count[0].result
 }
 
 output "foreach" {
-  value = random_string.foreach["hello"]
+  value = random_string.foreach["hello"].result
 }
