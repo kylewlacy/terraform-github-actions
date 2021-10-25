@@ -180,7 +180,7 @@ jobs:
           path: tests/target
           replace: |
             random_string.foreach["hello"]
-            random_string.count
+            random_string.count[0]
           variables: |
             length = 10
 
@@ -198,7 +198,7 @@ jobs:
           path: tests/target
           replace: |
             random_string.foreach["hello"]
-            random_string.count
+            random_string.count[0]
           variables: |
             length = 10
 

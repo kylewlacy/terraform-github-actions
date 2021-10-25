@@ -19,6 +19,8 @@ exec 3>&1
 
 function apply() {
 
+    debug_log terraform apply -input=false -no-color -auto-approve -lock-timeout=300s $PLAN_OUT
+
     set +e
     # shellcheck disable=SC2086
     (cd "$INPUT_PATH" && terraform apply -input=false -no-color -auto-approve -lock-timeout=300s $PLAN_OUT) | $TFMASK

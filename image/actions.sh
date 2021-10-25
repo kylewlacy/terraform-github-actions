@@ -306,6 +306,8 @@ function plan() {
         PLAN_OUT_ARG=""
     fi
 
+    debug_log terraform plan -input=false -no-color -detailed-exitcode -lock-timeout=300s $PLAN_OUT_ARG $PLAN_ARGS
+
     set +e
     # shellcheck disable=SC2086
     (cd "$INPUT_PATH" && terraform plan -input=false -no-color -detailed-exitcode -lock-timeout=300s $PLAN_OUT_ARG $PLAN_ARGS) \
